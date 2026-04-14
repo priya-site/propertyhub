@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>About PropertyHub</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: "#0A192F",
+                        deepnavy: "#112240",
+                        card: "#F3F4F6",
+                        royal: "#6A0DAD",
+                        lightroyal: "#8A2BE2",
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-white text-navy flex flex-col min-h-screen">
+
+    <!-- ✅ Wrap all content -->
+    <div class="flex-grow">
+
+        <div id="navbar-container"></div>
+
+        <!-- About Section -->
+        <div class="py-10 sm:py-14 md:py-16">
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-royal mb-6 sm:mb-10 text-center leading-tight">
+                    About PropertyHub
+                </h1>
+
+                <div class="bg-card p-5 sm:p-6 md:p-10 rounded-xl shadow-xl">
+
+                    <p class="font-semibold text-royal text-base sm:text-lg mb-4">
+                        PROPERTY HUB INDIA PVT. LTD.
+                    </p>
+
+                    <p class="text-lightroyal mt-3 flex items-center gap-2 text-sm sm:text-base">
+                        <i class="fa-solid fa-location-dot"></i> Corporate Office - Mumbai
+                    </p>
+
+                    <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        Gamdevi Bhendi Galli, Gundavali Gaothan, Andheri West, Mumbai - 400053, India.
+                    </p>
+
+                    <p class="mt-2 text-gray-700 text-sm sm:text-base">Phone: +91-35679 85408</p>
+                    <p class="text-gray-700 text-sm sm:text-base break-all">Email: contact@propertyhub.com</p>
+
+                    <div class="mt-6 sm:mt-8">
+
+                        <p class="text-lightroyal mt-3 flex items-center gap-2 text-sm sm:text-base">
+                            <i class="fa-solid fa-location-dot"></i> Dubai - International Office
+                        </p>
+
+                        <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                            Al Manara Building, 2nd Floor (Above Bugatti showroom),
+                            Sheikh Zayed Road, Dubai, UAE
+                        </p>
+
+                        <p class="mt-2 text-gray-700 text-sm sm:text-base">Phone: +91-56940 27540</p>
+                        <p class="text-gray-700 text-sm sm:text-base break-all">Email: contact@propertyhub.com</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Directions Section -->
+        <div class="flex items-center justify-center flex-col py-10 sm:py-14 md:py-16 bg-white px-4">
+
+            <p class="text-xl sm:text-2xl md:text-3xl font-bold text-royal mb-6 sm:mb-8 text-center">
+                Directions
+            </p>
+
+            <!-- Responsive Map -->
+            <div class="w-full max-w-5xl">
+
+                <div class="relative w-full h-[220px] sm:h-[320px] md:h-[450px]">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.7254119461754!2d72.85162361014508!3d19.119698382019177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c82d03a30ee5%3A0x5b4111ef287d8fad!2sGamdevi%20Bhendi%20Galli%2C%20Andheri%20East%2C%20Mumbai%2C%20Maharashtra%20400069!5e0!3m2!1sen!2sin!4v1771568841721!5m2!1sen!2sin"
+                        class="absolute top-0 left-0 w-full h-full rounded-xl border-4 border-lightroyal shadow-lg"
+                        style="border:0;"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ✅ Footer stays at bottom -->
+    <div id="footer-container"></div>
+
+    <script src="js/loadNavbar.js"></script>
+    <script src="js/loadFooter.js"></script>
+
+</body>
+
+</html>

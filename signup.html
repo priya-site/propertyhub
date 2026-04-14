@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Property Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#0A192F",
+            deepnavy: "#112240",
+            card: "#F3F4F6",
+            royal: "#6A0DAD",
+            lightroyal: "#8A2BE2",
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .signup-bg {
+      background-image: url("https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-navy">
+
+  <div id="navbar-container"></div>
+
+  <div class="flex items-center justify-center min-h-[90vh] sm:min-h-screen px-4 py-6">
+
+    <div class="w-full max-w-5xl bg-card mt-6 sm:mt-10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-lightroyal">
+
+      <div class="flex flex-col md:flex-row">
+
+        <!-- LEFT SIDE IMAGE -->
+        <div class="hidden md:flex md:w-1/2 relative signup-bg">
+
+          <div class="absolute inset-0 bg-gradient-to-br from-royal/80 to-lightroyal/60"></div>
+
+          <div class="relative z-10 flex items-center justify-center p-6 md:p-10 text-white text-center">
+            <div>
+              <h1 class="text-2xl md:text-4xl font-bold mb-4 drop-shadow-lg">
+                Join Property Hub
+              </h1>
+              <p class="text-sm md:text-base text-gray-100 drop-shadow-md">
+                Create your account and start exploring premium properties and listings today.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+        <div class="w-full md:w-1/2 p-6 sm:p-8 md:p-10 bg-white">
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-royal mb-6 sm:mb-8 text-center">
+            Create Your Account
+          </h2>
+
+          <form id="signupForm" action="signup.php" method="POST" class="space-y-5 sm:space-y-6">
+
+            <!-- ROLE -->
+            <select name="role" required 
+              class="w-full p-3 rounded-xl border border-gray-300 
+              focus:outline-none focus:ring-2 focus:ring-royal 
+              focus:border-royal transition text-sm sm:text-base">
+              <option value="">Select Role</option>
+              <option value="user">User</option>
+              <option value="owner">Owner</option>
+              <option value="broker">Broker</option>
+            </select>
+
+            <!-- Full Name -->
+            <div class="relative">
+              <i class="fa-solid fa-user absolute left-4 top-3.5 text-gray-400"></i>
+              <input type="text" id="fullName" name="fullname" placeholder="Full Name"
+                class="w-full pl-12 p-3 rounded-xl border border-gray-300 
+                focus:outline-none focus:ring-2 focus:ring-royal 
+                focus:border-royal transition text-sm sm:text-base">
+              <p id="nameError" class="text-red-500 text-sm mt-1 hidden"></p>
+            </div>
+
+            <!-- Contact -->
+            <div class="relative">
+              <i class="fa-solid fa-phone absolute left-4 top-3.5 text-gray-400"></i>
+              <input type="text" id="contact" name="contact" placeholder="Contact Number"
+                class="w-full pl-12 p-3 rounded-xl border border-gray-300 
+                focus:outline-none focus:ring-2 focus:ring-royal 
+                focus:border-royal transition text-sm sm:text-base">
+              <p id="contactError" class="text-red-500 text-sm mt-1 hidden"></p>
+            </div>
+
+            <!-- Email -->
+            <div class="relative">
+              <i class="fa-solid fa-envelope absolute left-4 top-3.5 text-gray-400"></i>
+              <input type="email" id="signupEmail" name="email" placeholder="Email"
+                class="w-full pl-12 p-3 rounded-xl border border-gray-300 
+                focus:outline-none focus:ring-2 focus:ring-royal 
+                focus:border-royal transition text-sm sm:text-base">
+              <p id="emailError" class="text-red-500 text-sm mt-1 hidden"></p>
+            </div>
+
+            <!-- Password -->
+            <div class="relative">
+              <i class="fa-solid fa-lock absolute left-4 top-3.5 text-gray-400"></i>
+              <input type="password" id="signupPassword" name="password" placeholder="Password"
+                class="w-full pl-12 p-3 rounded-xl border border-gray-300 
+                focus:outline-none focus:ring-2 focus:ring-royal 
+                focus:border-royal transition text-sm sm:text-base">
+              <p id="passwordError" class="text-red-500 text-sm mt-1 hidden"></p>
+            </div>
+
+            <!-- Button -->
+            <button type="submit"
+              class="w-full bg-royal text-white py-3 rounded-xl font-semibold 
+              hover:bg-lightroyal transition duration-300 shadow-md hover:shadow-lg">
+              Sign Up
+            </button>
+
+          </form>
+
+          <p class="mt-6 sm:mt-8 text-center text-gray-600 text-sm sm:text-base">
+            Already have an account?
+            <a href="login.html"
+              class="text-royal underline ml-1 hover:text-lightroyal font-medium">
+              Login
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="footer-container"></div>
+
+  <script src="js/signup.js"></script>
+  <script src="js/loadNavbar.js"></script>
+  <script src="js/loadFooter.js"></script>
+
+</body>
+
+</html>
