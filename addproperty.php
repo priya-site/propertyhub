@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'owner') {
 
 function fetchImages($query) {
 
-    $apiKey = "BfQWWU6dH1BJwYCfd85BqHxSlctMGOlHL2EyrXSkJA0pz5MrWzRxNQgS"; // 🔥 PUT YOUR REAL KEY
+    $apiKey = "api_key"; // 🔥 PUT YOUR REAL KEY
 
     $url = "https://api.pexels.com/v1/search?query=" . urlencode($query) . "&per_page=4";
 
