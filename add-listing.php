@@ -44,7 +44,7 @@ function fetchImages($query) {
 // FETCH VIDEO FROM PEXELS
 function fetchVideo($query){
 
-    $apiKey = "BfQWWU6dH1BJwYCfd85BqHxSlctMGOlHL2EyrXSkJA0pz5MrWzRxNQgS";
+    $apiKey = "api_key";
 
     $url = "https://api.pexels.com/videos/search?query=" . urlencode($query) . "&per_page=1";
 
