@@ -134,7 +134,7 @@ if($isPropertyQuery){
 
 /* ================= AI ONLY WHEN NO DATA ================= */
 
-$apiKey = "AIzaSyAASNiJb19ipjan5iVSbyY1Ax2_aa2zmmg";
+$apiKey = "api_key";
 $model = "gemini-2.5-flash";
 
 $url = "https://generativelanguage.googleapis.com/v1/models/$model:generateContent?key=$apiKey";
